@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const ticketSchema = mongoose.Schema({
   flightId: {
     type: String,
@@ -17,3 +19,7 @@ const ticketSchema = mongoose.Schema({
   watchers: Number,
   availability: Number,
 });
+
+const Ticket = mongoose.model("Ticket", ticketSchema);
+
+export default Ticket;
