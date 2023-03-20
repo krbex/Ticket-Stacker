@@ -21,3 +21,9 @@ export const getFlights = async (req, res) => {
     res.status(404).json({ message: err.message });
   }
 };
+
+// UPDATE
+export const watchTicket = async (req, res) => {
+  try {
+  } catch (err) {}
+};
