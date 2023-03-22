@@ -1,6 +1,5 @@
 import Flight from "../models/Flight.js";
 import Ticket from "../models/Ticket.js";
-import User from "../models/User.js";
 
 // READ
 export const getTickets = async (req, res) => {
@@ -25,5 +24,25 @@ export const getFlights = async (req, res) => {
 // UPDATE
 export const watchTicket = async (req, res) => {
   try {
-  } catch (err) {}
+    const { id } = req.params;
+    const { userId } = req.body;
+    const ticket = await Ticket.findById(id);
+    const isWatched = flight.watched.get(userId);
+
+    if (isWatched) {
+      ticket.watchers.delete(userId);
+    } else {
+      ticket.watchers.set(userId, true);
+    }
+
+    const watchedTicket = await Ticket.findByIdAndUpdate(
+      id,
+      { watches: ticket.watchers },
+      { new: true }
+    );
+
+    res.status(200).json(watchedTicket);
+  } catch (err) {
+    res.status(404).json({ message: err.message });
+  }
 };
