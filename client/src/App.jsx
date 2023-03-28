@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/nav/Nav'
-import Home from './components/home/home' 
+import Home from './components/home/Home' 
 import Info from './components/info/Info'
 import Lounge from './components/lounge/Lounge'
 import Travelers from './components/travelers/Travelers'
@@ -13,12 +13,12 @@ const App = () => {
     <div>
       <Navbar/>
       <Home/>
-      <Info/>
+      {/* <Info/>
       <Support/>
       <Lounge/>
       <Travelers/>
       <Subscribers/>
-      <Footer/>
+      <Footer/> */}
       </div>
   )
 }

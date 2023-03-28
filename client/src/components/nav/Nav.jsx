@@ -10,16 +10,13 @@ import {CgMenuGridO} from 'react-icons/cg'
 import logo from '../../assets/logo.png'
 
 const Navbar = () => {
-
     const [active, setActive] = useState('navBarMenu')
     const showNavBar = () => {
-        setActive('NavBarMenu showNavBar')
+        setActive('navBarMenu showNavBar')
     }
     const removeNavBar = () => {
-        setActive('NavBarMenu showNavBar')
+        setActive('navBarMenu showNavBar')
     }
-
-
 
     return (
         <div className='navBar flex'>
@@ -29,16 +26,16 @@ const Navbar = () => {
                 </div>
 
                 <div className='none flex'>
-                    <li className='flex'> <BsPhoneVibrate/> Support</li>
-                    <li className='flex'> <AiOutlineGlobal/> Languages</li>
+                    <li className='flex'> <BsPhoneVibrate className='icon'/> Support</li>
+                    <li className='flex'> <AiOutlineGlobal className='icon'/> Languages</li>
                 </div>
 
                 <div className='atb flex'>
                     <span>Sign In</span>
-                    <span>Sign In</span>
+                    <span>Sign Out</span>
                 </div>
             </div>
-            <div className="NavBarTwo">
+            <div className="navBarTwo flex">
                 <div className="logoDiv">
                     <img className='Logo' src={logo} alt='logo'/>
                 </div>
@@ -59,7 +56,7 @@ const Navbar = () => {
 
                 <button className='btn flex btnTwo'>
                         Contact
-                    </button>
+                </button>
 
                 <div onClick={showNavBar} className='toggleIcon'>
                     <CgMenuGridO className='icon'/>
