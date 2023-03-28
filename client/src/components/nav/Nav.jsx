@@ -15,7 +15,7 @@ const Navbar = () => {
         setActive('navBarMenu showNavBar')
     }
     const removeNavBar = () => {
-        setActive('navBarMenu showNavBar')
+        setActive('navBarMenu')
     }
 
     return (
