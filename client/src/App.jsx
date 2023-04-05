@@ -7,12 +7,14 @@ import Travelers from './components/travelers/Travelers'
 import Subscribers from './components/subscribers/Subscribers'
 import Support from './components/support/Support'
 import Footer from './components/footer/Footer'
+import Search from './components/search/Search'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
       <Home/>
+      <Search/>
       {/* <Info/>
       <Support/>
       <Lounge/>
