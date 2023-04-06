@@ -26,7 +26,7 @@ const Search = () => {
               </div>
               <div className="texts">
                 <h4>Location</h4>
-                <input type="text" placeholder="Where are you flying today?" />
+                <input type="text" placeholder="Where are you flying?" />
               </div>
             </div>
             {/* Single Input */}
@@ -47,10 +47,9 @@ const Search = () => {
               <div className="texts">
                 <h4>Date</h4>
                 <input type="text" placeholder="When are you flying?" />
-
-                <button className="btn btnBlock flex">Search Flight</button>
               </div>
             </div>
+            <button className="btn btnBlock flex">Search Flight</button>
           </div>
         </div>
       </div>
