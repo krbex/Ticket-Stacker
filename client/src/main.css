@@ -505,4 +505,119 @@ h2 {
 }
 .subscribe .sectionContainer .inputDiv .btn {
   width: 100%;
+}
+
+.footer {
+  background: var(--SecondaryColor);
+}
+.footer .sectionContainer {
+  gap: 2.5rem;
+}
+.footer .sectionContainer .gridOne {
+  gap: 1rem;
+  justify-content: center;
+  margin: auto;
+}
+.footer .sectionContainer .gridOne .githubIcon {
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.footer .sectionContainer .gridOne .githubIcon .icon {
+  height: 50px;
+  width: 30px;
+  border-radius: 10rem;
+  border: 1px solid var(--borderColor);
+  box-shadow: var(--boxShadow);
+  padding: 0.4rem;
+  color: var(--grayText);
+}
+.footer .sectionContainer .gridOne .githubIcon .icon:hover {
+  background: var(prim);
+  transform: translateY(-7px);
+  transition: var(--transition);
+  border: 1px solid var(--PrimaryColor);
+  color: var(--whiteColor);
+}
+.footer .footerLinks {
+  display: grid;
+}
+.footer .footerLinks .linkTitle {
+  color: var(--blackColor);
+  font-weight: 500;
+  display: block;
+  padding-bottom: 1rem;
+}
+.footer .footerLinks li a {
+  display: block;
+  color: var(--grayText);
+  transition: var(--transition);
+  padding: 0.3rem 0;
+}
+.footer .footerLinks li a:hover {
+  transform: translateX(7px);
+  color: var(--PrimaryColor);
+}
+.footer .logoDiv .Logo {
+  width: 20%;
+}
+.footer .tmDiv {
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
+  border-top: 1px solid var(--grayText);
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .home {
+    padding-top: 12rem;
+  }
+  .search .sectionContainer .searchInputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscribe .sectionContainer {
+    max-width: 80%;
+    margin: auto;
+  }
+  .subscribe .sectionContainer .inputDiv {
+    flex-direction: row;
+    padding: 0 0.5rem;
+    border-radius: 3rem;
+  }
+  .footer .sectionContainer {
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer .footerLinks {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 570px) {
+  .home .mainText {
+    width: 80%;
+  }
+  .search .sectionContainer .btns {
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .info .infoContainer .titleDiv {
+    flex-direction: row;
+  }
+  .info .infoContainer .titleDiv h2 {
+    text-align: left;
+    max-width: 500px;
+  }
+  .info .infoContainer .cardsDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */

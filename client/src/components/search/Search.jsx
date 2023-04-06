@@ -2,8 +2,23 @@ import React from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
+import { forwardRef, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-DatePicker.css";
 
 const Search = () => {
+
+  const [startDate, setStartDate] = useState();
+  const ExampleCustomInput = forwardRef(({ value, onClick, onChange }, ref) => (
+    <input
+      value={value}
+      className="example-custom-input"
+      onClick={onClick}
+      onChange={onChange}
+      ref={ref}
+    ></input>
+  ));
+
   return (
     <div className="search container section">
       <div className="sectionContainer grid">
@@ -45,8 +60,14 @@ const Search = () => {
                 <RxCalendar className="icon" />
               </div>
               <div className="texts">
-                <h4>Date</h4>
-                <input type="text" placeholder="When are you flying?" />
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  customInput={<ExampleCustomInput />}
+                  dayClassName={() => "example-datepicker-day-class"}
+                  popperClassName="example-datepicker-class"
+                  todayButton="TODAY"
+                />
               </div>
             </div>
             <button className="btn btnBlock flex">Search Flight</button>

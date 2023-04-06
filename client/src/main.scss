@@ -608,3 +608,197 @@ h2 {
         }
     }
 }
+
+// Footer styles
+.footer {
+    background: var(--SecondaryColor);
+
+    .sectionContainer {
+        gap: 2.5rem;
+
+        .gridOne {
+            gap: 1rem;
+            justify-content: center;
+            margin: auto;
+
+
+
+            .githubIcon {
+                justify-content: center;
+                margin-top: 1rem;
+                gap: 1rem;
+
+                .icon {
+                    height: 50px;
+                    width: 30px;
+                    border-radius: 10rem;
+                    border: 1px solid var(--borderColor);
+                    box-shadow: var(--boxShadow);
+                    padding: .4rem;
+                    color: var(--grayText);
+
+                    &:hover {
+                        background: var(prim);
+                        transform: translateY(-7px);
+                        transition: var(--transition);
+                        border: 1px solid var(--PrimaryColor);
+                        color: var(--whiteColor);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerLinks {
+        display: grid;
+
+        .linkTitle {
+            color: var(--blackColor);
+            font-weight: 500;
+            display: block;
+            padding-bottom: 1rem;
+        }
+
+        li a {
+            display: block;
+            color: var(--grayText);
+            transition: var(--transition);
+            padding: .3rem 0;
+
+            &:hover {
+                transform: translateX(7px);
+                color: var(--PrimaryColor);
+            }
+        }
+    }
+
+    .logoDiv {
+        .Logo {
+            width: 20%;
+        }
+    }
+
+    .tmDiv {
+        justify-content: center;
+        margin-top: 1.5rem;
+        padding: 1rem;
+        gap: 1rem;
+        border-top: 1px solid var(--grayText);
+        text-align: center;
+    }
+}
+
+// Media breakpoints
+@media screen and (min-width: 480px) {
+
+    // Home
+    .home {
+        padding-top: 12rem;
+    }
+
+    // Search
+    .search {
+        .sectionContainer {
+            .searchInputs {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    // Travel
+    .travelers {
+        .sectionContainer {
+            .travelersContainer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    // Subscribers
+    .subscribe {
+        .sectionContainer {
+            max-width: 80%;
+            margin: auto;
+
+            .inputDiv {
+                flex-direction: row;
+                padding: 0 .5rem;
+                border-radius: 3rem;
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        .sectionContainer {
+            align-items: flex-start;
+            grid-template-columns: repeat(2, 1fr);
+
+            .footerLinks {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 570px) {
+
+    // Home
+    .home {
+        .mainText {
+            width: 80%;
+        }
+    }
+
+    // Search
+    .search {
+        .sectionContainer {
+            .btns {
+                border-radius: 3rem;
+                flex-direction: row;
+            }
+        }
+    }
+
+    // Support
+    .support {
+        .sectionContainer {
+            .infoDiv {
+                .textDiv {
+                    margin-top: 2rem;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    // Info
+    .info {
+        .infoContainer {
+            .titleDiv {
+                flex-direction: row;
+
+                h2 {
+                    text-align: left;
+                    max-width: 500px;
+                }
+            }
+
+            .cardsDiv {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    // Lounge
+    .lounge {
+        .sectionContainer {
+            .textDiv {
+                .grids {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+}

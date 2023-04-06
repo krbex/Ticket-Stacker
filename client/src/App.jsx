@@ -9,6 +9,7 @@ import Support from "./components/support/Support";
 import Footer from "./components/footer/Footer";
 import Search from "./components/search/Search";
 
+
 const App = () => {
   return (
     <div>
@@ -20,7 +21,7 @@ const App = () => {
       <Lounge />
       <Travelers />
       <Subscribers />
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };
