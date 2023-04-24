@@ -620,4 +620,7 @@ h2 {
   .info .infoContainer .cardsDiv {
     grid-template-columns: repeat(2, 1fr);
   }
+  .lounge .sectionContainer .textDiv .grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
