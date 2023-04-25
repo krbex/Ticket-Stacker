@@ -4,7 +4,7 @@ import { RiAccountPinCircleLine } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
 import { forwardRef, useState } from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-DatePicker.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Search = () => {
 
